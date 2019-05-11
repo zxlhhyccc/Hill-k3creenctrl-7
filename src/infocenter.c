@@ -279,7 +279,7 @@ int update_page_info(PAGE page) {
         break;
     case PAGE_WEATHER:
         updater = update_weather_info;
-        break;
+        break;	    
     case PAGE_WIFI:
         updater = update_wifi_info;
         break;

@@ -32,8 +32,8 @@ static void config_show_help() {
         "and internet connection info\n"
         "\t-i, --basic-info-script <PATH>\tUse this script to gather "
         "basic info\n"
-        "\t-e, --weather-script <PATH>\tUse this script to gather "
-        "weather info\n"
+	"\t-e, --weather-script <PATH>\tUse this script to gather "
+	"weather info\n"
         "\nThe defaults are /lib/k3screenctrl/{weather,host,wifi,port,wan,basic}.sh "
         "with an interval of 2 seconds\n");
     exit(1);
@@ -47,7 +47,7 @@ void config_parse_cmdline(int argc, char *argv[]) {
         {"test", no_argument, NULL, 't'},
         {"update-interval", required_argument, NULL, 'd'},
         {"screen-timeout", required_argument, NULL, 'm'},
-        {"weather-script", required_argument, NULL, 'e'},
+	{"weather-script", required_argument, NULL, 'e'},
         {"host-script", required_argument, NULL, 's'},
         {"wifi-script", required_argument, NULL, 'w'},
         {"port-script", required_argument, NULL, 'p'},
@@ -79,10 +79,10 @@ void config_parse_cmdline(int argc, char *argv[]) {
         case 'm':
             g_config.screen_timeout = atoi(optarg);
             break;
-        case 'e':
-            free(g_config.weather_script);
-            g_config.weather_script = strdup(optarg);
-            break;
+	case 'e':
+	    free(g_config.weather_script);
+		g_config.weather_script = strdup(optarg);
+		break;
         case 's':
             free(g_config.host_script);
             g_config.host_script = strdup(optarg);

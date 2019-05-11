@@ -41,7 +41,7 @@ int request_notify_event(EVENT event) {
 
 int request_update_wan(int is_connected, int tx_Bps, int rx_Bps) {
     WAN_INFO waninfo;
-    bzero(&waninfo, sizeof(waninfo));
+
     waninfo.is_connected = is_connected;
     waninfo.tx_bytes_per_sec = tx_Bps;
     waninfo.rx_bytes_per_sec = rx_Bps;

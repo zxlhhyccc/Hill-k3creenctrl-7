@@ -38,9 +38,9 @@ static void send_page_data(PAGE page) {
         request_update_hosts_paged(get_hosts(), get_hosts_count(),
                                    g_host_page * HOSTS_PER_PAGE);
         break;
-    case PAGE_WEATHER:
-	    request_update_weather(&g_weather_info);
-		break;
+        case PAGE_WEATHER:
+	        request_update_weather(&g_weather_info);
+		        break;
     default:
         syslog(LOG_WARNING, "unknown page requested: %d\n", page);
         break;
@@ -53,7 +53,7 @@ void page_send_initial_data() {
     send_page_data(PAGE_WAN);
     send_page_data(PAGE_WIFI);
     send_page_data(PAGE_HOSTS);
-	send_page_data(PAGE_WEATHER);
+    send_page_data(PAGE_WEATHER);
     request_switch_page(PAGE_WAN);
 }
 
