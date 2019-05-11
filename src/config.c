@@ -54,7 +54,7 @@ void config_parse_cmdline(int argc, char *argv[]) {
         {"wan-script", required_argument, NULL, 'n'},
         {"basic-info-script", required_argument, NULL, 'i'},
         {0, 0, 0, 0}};
-    static const char *short_opts = "hfrt:d:m:e:s:w:p:n:i:";
+    static const char *short_opts = "hfrtd:m:s:w:p:n:i:";
 
     int opt_index;
     signed char result;
